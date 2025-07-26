@@ -2,7 +2,7 @@ import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import {Button, Divider, IconButton, Typography} from '@mui/material';
+import {Divider, IconButton, Typography} from '@mui/material';
 
 import CloseIcon from '@mui/icons-material/Close';
 

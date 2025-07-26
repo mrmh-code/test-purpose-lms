@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import PopupModal from '../../common/utility /modal/PopupModal';
 
 import {Controller, useForm} from 'react-hook-form';
-import {Button, Grid} from '@mui/material';
+import Grid from '@mui/material/Grid';
+import {Button} from '@mui/material';
 import TextInputField from '../../common/input/TextInputField';
 
 import FormControl from '@mui/material/FormControl';
@@ -10,6 +11,7 @@ import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
+
 export const courseType = ['Programming', 'DB', 'OOP', 'System Design'];
 const CourseAddEditPopup = ({closeModal, refreshDataTable, itemId}: any) => {
   const {handleSubmit, control, register, reset}: any = useForm({});
@@ -45,8 +47,8 @@ const CourseAddEditPopup = ({closeModal, refreshDataTable, itemId}: any) => {
   return (
     <PopupModal label={'course'} open={true} close={closeModal}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={4}>
+        <Grid spacing={2} container>
+          <Grid size={{xs: 12, sm: 6, md: 4}}>
             <TextInputField
               id={'title'}
               control={control}
@@ -54,7 +56,7 @@ const CourseAddEditPopup = ({closeModal, refreshDataTable, itemId}: any) => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={4}>
+          <Grid size={{xs: 12, sm: 6, md: 4}}>
             <FormControl fullWidth sx={{minWidth: '250px', mt: 1}}>
               <InputLabel id='course-type-label'>Course Type</InputLabel>
 
@@ -82,7 +84,7 @@ const CourseAddEditPopup = ({closeModal, refreshDataTable, itemId}: any) => {
             </FormControl>
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={{xs: 12, sm: 6, md: 4}}>
             <TextInputField
               id={'description'}
               control={control}

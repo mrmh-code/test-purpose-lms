@@ -65,7 +65,7 @@ const CoursePage = () => {
 
       if (courseTitleSearch.trim()) {
         console.log('courseTitleSearch', courseTitleSearch);
-        filterData = filterData.filter((item): any => {
+        filterData = filterData.filter((item: any): any => {
           return item.title
             .trim()
             ?.toLowerCase()
@@ -81,7 +81,7 @@ const CoursePage = () => {
     const storedData = localStorage.getItem('courseData');
     if (storedData) {
       const parseData = JSON.parse(storedData);
-      const updateData = parseData.filter((i) => i.id !== itemId);
+      const updateData = parseData.filter((i: any): any => i.id !== itemId);
       localStorage.setItem('courseData', JSON.stringify(updateData));
     }
     refreshDataTable();
@@ -117,22 +117,18 @@ const CoursePage = () => {
           </FormControl>
         </Box>
 
-        <Box className={'right-section'}>
-          <Button
-            m={1}
-            onClick={() => openAddEditModal(null)}
-            variant='contained'>
+        <Box className={'right-section'} m={1}>
+          <Button onClick={() => openAddEditModal(null)} variant='contained'>
             Add Course
           </Button>
         </Box>
       </CourseSectionHeader>
 
       <Box className={'data-table'} mt={4}>
-        <Grid container spacing={2}>
-          {courseData?.map((course, index): any => (
+        <Grid container spacing={3}>
+          {courseData?.map((course: any, index: any) => (
             <Grid
-              item
-              md={3}
+              key={index}
               sx={{
                 background: '#c3ded9',
                 p: 2,
