@@ -88,7 +88,7 @@ const CoursePage = () => {
   };
 
   return (
-    <Box sx={{width: '100%', overflowX: 'auto'}}>
+    <Box sx={{width: '100%', overflowX: 'auto', minHeight: '100vh'}}>
       <CourseSectionHeader>
         <Box className={'left-section'} sx={{display: 'flex'}}>
           <TextField
