@@ -57,7 +57,7 @@ const CourseAddEditPopup = ({closeModal, refreshDataTable, itemId}: any) => {
           </Grid>
 
           <Grid size={{xs: 12, sm: 6, md: 4}}>
-            <FormControl fullWidth sx={{minWidth: '250px', mt: 1}}>
+            <FormControl fullWidth={true} margin={'normal'}>
               <InputLabel id='course-type-label'>Course Type</InputLabel>
 
               <Controller

@@ -14,7 +14,5 @@ function common<T = any>({mutate, error, data: responseData}: any) {
 }
 
 export function useAxiosSWR<T = any>(deps: any[] | string | null) {
-  return common<T>(
-    useSWR(deps, (url: any, params: any) => apiGet(url, {params})),
-  );
+  return common<T>(useSWR(deps, ([url, params]: any) => apiGet(url, {params})));
 }

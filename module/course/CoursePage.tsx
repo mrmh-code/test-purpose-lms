@@ -86,9 +86,29 @@ const CoursePage = () => {
     }
     refreshDataTable();
   };
+  // const [holidayType] = useState({row_status: 1});
+  // const {data: itemData} = useFetchCourses(holidayType);
+  //
+  // const handleAct = async (itemId: number) => {
+  //   try {
+  //     await createCourse({
+  //       volume_id: '60c72b2f9c8f1a001c876c1a',
+  //       act_id: '60c72b2f9c8f1a001c876c1b',
+  //       part_no: 1,
+  //       part_no_footnote: 0,
+  //       part_name: 'Introduction to Environmental Law BD',
+  //       part_name_footnote: 'First Edition',
+  //       order_no: 1,
+  //       status: 1,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <Box sx={{width: '100%', overflowX: 'auto', minHeight: '100vh'}}>
+      {/*<Button onClick={handleAct}>Act Create</Button>*/}
       <CourseSectionHeader>
         <Box className={'left-section'} sx={{display: 'flex'}}>
           <TextField

@@ -1,1 +1,1 @@
-export const  API_COURSES="/courses"
+export const API_COURSES = '/act-part';

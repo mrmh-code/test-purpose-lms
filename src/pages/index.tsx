@@ -1,13 +1,11 @@
-import CoursePage from "../../module/course/CoursePage";
-import Box from "@mui/material/Box";
+import CoursePage from '../../module/course/CoursePage';
 
+import {CourseProvider} from '../../common/context/CourseContext';
 
 export default function Home() {
   return (
     <>
       <CoursePage />
-
-
     </>
   );
 }
